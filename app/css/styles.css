@@ -1,0 +1,63 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+.weather {
+	width: 100%;
+	height: 300px;
+	background: no-repeat;
+	margin: 0 auto;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+.vertical {
+	align-self: center;
+}
+.convert {
+	margin-top: 30px;
+}
+.convert { cursor: pointer; cursor: hand; }
+.convert>span:hover {color: yellow;}
+.sweater {margin-bottom: 20px; font-size: 35px;}
+.title {text-align: center; padding-top: 170px;}
+.main {width: 100%; margin: 0 auto; text-align: center;}
+body {font-family: 'Montserrat', 'Helvetica', sans-serif;}
+ul {list-style-type: none; padding: 0;}
+
+.big {font-size: 50px;}
+.cityname {font-size: 20px;}
+
+input {font-size: 18px;}
+
+
+@media screen and (max-width: 500px) {
+ 	.weather {
+		width: 100%;
+	}
+}
+
+.fading.ng-hide {
+  opacity: 0;
+}
+
+.fading.ng-hide-remove,
+.fading.ng-hide-add {
+  display: block !important;
+}
+
+.fading.ng-hide-remove {
+  transition: all linear 1000ms;
+}
+
+.fading.ng-hide-add {
+  transition: all linear 500ms;
+}
+
+@media (min-width: 1200px){
+.container {
+    width: 100%
+}
+}
