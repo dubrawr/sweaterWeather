@@ -7,8 +7,8 @@ angular.module('myApp', ['ngRoute', 'ngAnimate'])
 	function($routeParams, $scope, $http){
 
 		var url = "https://shrouded-sea-10419.herokuapp.com/weather";
-		var x = confirm("Share your location?");
-		if (x){
+		// var x = confirm("Share your location?");
+		// if (x){
 	navigator.geolocation.getCurrentPosition(function(position) {
 		
 		var latitude = position.coords.latitude;
@@ -32,7 +32,7 @@ angular.module('myApp', ['ngRoute', 'ngAnimate'])
 		};
 		$scope.getLocation();
 	});
-}
+// }
 
 		$scope.getWeather = function(){
 			var params = {
