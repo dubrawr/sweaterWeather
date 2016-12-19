@@ -13,9 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="app/css/styles.css">
 </head>
 <body ng-controller="mainCtrl" class="container ng-cloak">
-	
+		
 		<div class="big title">Should I wear a sweater?</div>
 		<div class="main">
+		<div ng-show="isLoading" class="loading animate-view-container"><img src="app/images/loading-animation.gif"></div>
 		<form ng-submit="getWeather()">
 			<input class="cityInput" ng-model="cityName" placeholder="enter a city name" name="city" type="text">
 			<input type="submit" value="?" class="btn">

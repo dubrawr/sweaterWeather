@@ -3,14 +3,14 @@ angular.module('myApp', ['ngRoute', 'ngAnimate'])
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('mainCtrl', ['$routeParams', '$scope', '$http',
-	function($routeParams, $scope, $http){
-
+.controller('mainCtrl', ['$routeParams', '$scope', '$http', '$rootScope',
+	function($routeParams, $scope, $http, $rootScope){
+		
 		var url = "https://shrouded-sea-10419.herokuapp.com/weather";
 		// var x = confirm("Share your location?");
 		// if (x){
 	navigator.geolocation.getCurrentPosition(function(position) {
-		
+		$scope.isLoading = true;
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
 		console.log(latitude+' '+ longitude);
@@ -158,6 +158,7 @@ angular.module('myApp', ['ngRoute', 'ngAnimate'])
 					'background-image': 'url('+$scope.backgroundUrl+')',
 					'text-shadow': $scope.shadow
 				};
+				$scope.isLoading = false;
 
 	};
 
