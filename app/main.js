@@ -191,6 +191,8 @@ $scope.convertC = function(){
 		console.log('already C');
 	} else {
 	$scope.temp = toCelsius($scope.temp);
+	$scope.lowTemp = toCelsius($scope.lowTemp);
+	$scope.highTemp = toCelsius($scope.highTemp);
 	$scope.degree = 'C';
 	}
 };
@@ -200,6 +202,8 @@ $scope.convertF = function(){
 		console.log('already F');
 	} else {
 	$scope.temp = toFahrenheit($scope.temp);
+	$scope.lowTemp = toFahrenheit($scope.lowTemp);
+	$scope.highTemp = toFahrenheit($scope.highTemp);
 	$scope.degree = 'F';
 	}
 };
